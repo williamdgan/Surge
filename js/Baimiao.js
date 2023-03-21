@@ -5,7 +5,6 @@
 hostname = baimiao.uzero.cn
 
 QuantimultX:
-[rewrite_local]
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baimiao.js
 
 Surge:
