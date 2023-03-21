@@ -1,11 +1,18 @@
 /*
 bilibili fan drama open 1080P+
 
-QX:
-https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Mubdao/Example/main/bilibili.js
+[MITM]
+hostname = api.bilibili.com,app.bilibili.com
 
-QX MITM = api.bilibili.com,app.bilibili.com
+Quantimultx:
+[Script]
+https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/Bilibili.js
+
+Surge:
+[Script]
+Bilibili= type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Bilibili.js
 */
+
 
 var body = $response.body;
 var url = $request.url;
