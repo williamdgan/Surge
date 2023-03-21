@@ -4,8 +4,8 @@ bilibili fan drama open 1080P+
 [MITM]
 hostname = api.bilibili.com,app.bilibili.com
 
-Quantimultx:
-[Script]
+QuantimultX:
+[rewrite_local]
 https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)) url script-response-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/Bilibili.js
 
 Surge:
