@@ -8,8 +8,7 @@ QuantumultX:
 https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/Caiyun.js
 
 Surge:
-Caiyun = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Caiyun.js
-    
+Caiyun = type=http-response,requires-body=1,max-size=0,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Caiyun.js   
 */
 
 
