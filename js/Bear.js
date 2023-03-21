@@ -5,7 +5,6 @@
 hostname= buy.itunes.apple.com
 
 QuantumultX：
-[rewrite_local]
 ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt url script-response-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/Bear.js
 
 Surge：
