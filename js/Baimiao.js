@@ -4,7 +4,7 @@
 [MITM]
 hostname = baimiao.uzero.cn
 
-Quantimultx:
+QuantimultX:
 [Script]
 ^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baimiao.js
 
