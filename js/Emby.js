@@ -1,7 +1,17 @@
 /*
-EmbyPremium = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Example/main/emby.js
-hostname= %APPEND% mb3admin.com
+解锁EmbyPremium
+
+[MITM]
+hostname = mb3admin.com
+
+QuantumultX:
+^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice url script-response-body https://raw.githubusercontent.com/Mubdao/Example/main/emby.js
+
+Surge:
+Emby= type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Example/main/emby.js
 */
+
+
 if ($request.url.indexOf('mb3admin.com/admin/service/registration/validateDevice') != -1) {
       if($response.status!=200){
           $notification.post("", "", "");
