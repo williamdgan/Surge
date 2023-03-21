@@ -3,12 +3,13 @@
 
 [MITM]
 hostname = baimiao.uzero.cn
-QX:
+Quantimultx:
 [Script]
-^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/Mubdao/Example/main/baimiao.js
-SURGE:
+^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baimiao.js
+
+Surge:
 [Script]
-Baimiao.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lcmigg/Surge/master/Script/Baimiao.js,script-update-interval=0,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser
+Baimiao.js = type=http-response,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baimiao.js,script-update-interval=0,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser
 */
 
 let obj = JSON.parse($response.body);
