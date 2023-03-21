@@ -1,3 +1,14 @@
+/*
+QuantumultX格式转换为Surge
+
+[MITM]
+hostname = %APPEND% github.com:443, raw.githubusercontent.com:443
+
+Surge:
+[Script]
+Qx_Surge = type=http-request,pattern=qx$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Example/main/qx_surge.js
+*/
+
 let req = $request.url.replace(/qx$/,'')
 let name = '#!name= ' + (req.match(/.+\/(.+)\.(conf|js)/)?.[1] || '无名')
 !(async () => {
