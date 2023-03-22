@@ -56,10 +56,10 @@ let proto = x.match('proto.js') ? ',binary-body-mode=1' : '' ;
 			let url = x.match(/[^\s]+/)[0];
 			let jct = x.match(/reject?[^\s]+/)[0];
 				let obj = {
-				"reject-200" : 'https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt',
-				"reject-img" : 'https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif',
-				"reject-dict" : 'https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json',
-				"reject-array" : 'https://raw.githubusercontent.com/mieqq/mieqq/master/reject-array.json',
+				"reject-200" : 'https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-200.txt',
+				"reject-img" : 'https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-img.gif',
+				"reject-dict" : 'https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json',
+				"reject-array" : 'https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-array.json',
 			   pp : function (){
 				return this[jct]}
 				}
@@ -108,7 +108,7 @@ let op = x.match(/\sresponse-header/) ?
 					script.push(
 						x.replace(
 							/([^\s]+)\surl\s(response|request)-body\s(.+)\2-body(.+)/,
-							`test = type=$2,pattern=$1,requires-body=1,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js, argument=$3->$4`,
+							`test = type=$2,pattern=$1,requires-body=1,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/replace-body.js, argument=$3->$4`,
 						),
 					);
 				}
