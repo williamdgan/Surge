@@ -14,6 +14,7 @@ DOMAIN-SUFFIX,letsencrypt.org
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,m.hotmail.com
 DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,91porn.com
@@ -29,7 +30,10 @@ DOMAIN-KEYWORD,youtube
 DOMAIN-KEYWORD,facebook
 DOMAIN-KEYWORD,twitter
 DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,spotify
 DOMAIN-KEYWORD,dropbox
 DOMAIN-KEYWORD,blogspot
 DOMAIN-KEYWORD,whatsapp
 DOMAIN-KEYWORD,github
+DOMAIN,imap-mail.outlook.com
+DOMAIN,smtp-mail.outlook.com
