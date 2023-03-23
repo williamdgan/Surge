@@ -1,0 +1,14 @@
+#!name=Net Panel
+#!desc=IP Ping @Keywos
+
+
+[Panel]
+# ip isp city
+NetISP = script-name=NetISP,update-interval=-1
+# ping
+NetPing = script-name=NetPing,update-interval=-1
+
+[Script]
+NetPing = type=generic,timeout=2,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/NetPing.js
+NetISP = type=generic,timeout=3,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/NetISP.js
+
