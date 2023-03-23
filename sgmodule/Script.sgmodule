@@ -11,22 +11,32 @@ skip-proxy = %APPEND% iosapps.itunes.apple.com
 [Rule]
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
 DOMAIN,app-site-association.cdn-apple.com,REJECT
+DOMAIN,sdkapp.uve.weibo.com,DIRECT
 
 [URL Rewrite]
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+# Bilibili
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
+^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 
 [Header Rewrite]
 http-request ^https?:\/\/www\.zhihu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
 http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
 
 [Map Local]
+# YouTube
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt" header="Content-Type: application/vnd.yt-ump"
 # CMB
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+# Weibo
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+# ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/page\/get_search_suggest data="https://raw.githubusercontent.com/Keywos/Rule/main/mocks/reject-dict.json"
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*user&a=get_searching_info data="https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_info.json"
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=search_topic data="https://github.com/ddgksf2013/Scripts/raw/master/weibo_search_topic.json"
 
 [Script]
-
 Youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting),requires-body=1,binary-body-mode=1,max-size=3145728,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
 Baimiao = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baimiao.js
 Ligthroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Lightroom.js
@@ -35,8 +45,25 @@ ColorWeather = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membe
 EmbyPremium = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mubdao/QuantumultX/main/js/emby.js
 Fileball = type=http-request,pattern=^http:\/\/(aliyun|quark|pikpak)\.example\.com,requires-body=1,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Fileball.js
 baidu-index = type=http-response,pattern=^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*|\/\?from.*)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js
+spotify = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
 Sub-Store Sync = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
+# Weibo
+weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibo_json = type=http-response,pattern=^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*feed&a=trends,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+weibo_json = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center,requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/weibo_json.js
+# Bilibili
+biliProto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/biliProto.js,script-update-interval=0
+biliProto = type=http-response,pattern=#^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/biliProto.js,script-update-interval=0
+biliProto = type=http-response,pattern=^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/View$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/biliProto.js,script-update-interval=0
+bili = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/(feed\/index|search\/square)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js,script-update-interval=0
+bili = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/(top\/activity|show\/tab\/v2)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js,script-update-interval=0
+bili = type=http-response,pattern=^https:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js,script-update-interval=0
+bili = type=http-response,pattern=^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js,script-update-interval=0
+bili = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(event\/list2|list|show)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js,script-update-interval=0
+bili = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine|myinfo)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js,script-update-interval=0
+bili = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js,script-update-interval=0
 
 [MITM]
-hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, mb3admin.com, www.google.cn, www.zhihu.com, *.baidu.com, sub.store, webappcfg.paas.cmbchina.com
+hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, mb3admin.com, www.google.cn, www.zhihu.com, *.baidu.com, spclient.wg.spotify.com, sub.store, webappcfg.paas.cmbchina.com, *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
