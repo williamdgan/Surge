@@ -31,7 +31,6 @@ Youtube = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtu
 Baimiao = type=http-response,pattern=^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baimiao.js
 Ligthroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Lightroom.js
 TestFlight = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js,script-update-interval=-1
-Bilibili = type=http-response,pattern=https:\/\/ap(p|i)\.bilibili\.com\/((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Bilibili.js
 ColorWeather = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Caiyun.js
 EmbyPremium = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mubdao/QuantumultX/main/js/emby.js
 Fileball = type=http-request,pattern=^http:\/\/(aliyun|quark|pikpak)\.example\.com,requires-body=1,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Fileball.js
@@ -40,4 +39,4 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 Sub-Store Sync = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
 
 [MITM]
-hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, app.bilibili.com, api.bilibili.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, mb3admin.com, www.google.cn, www.zhihu.com, *.baidu.com, sub.store, webappcfg.paas.cmbchina.com
+hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, mb3admin.com, www.google.cn, www.zhihu.com, *.baidu.com, sub.store, webappcfg.paas.cmbchina.com
