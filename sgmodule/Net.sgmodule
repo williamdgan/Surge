@@ -1,6 +1,6 @@
 #!name=Net Panel
-#!desc=IP Ping @Keywos
-
+#!desc=IP Ping 
+#@Keywos
 
 [Panel]
 # ping
