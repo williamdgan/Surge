@@ -1,0 +1,11 @@
+#!name=Bing Edge UA
+#!desc=safari修改UA直接使用newbing
+#Surge pro @xiaobail
+
+
+[Script]
+bing-edge-ua = type=http-request,pattern=^http(s)?:\/\/(?:.*\.)?bing\.com,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Edge.js,requires-body=false
+
+
+[MITM]
+hostname = %APPEND% *.bing.com, bing.com
