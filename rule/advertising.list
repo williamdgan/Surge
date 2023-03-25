@@ -1,14 +1,6 @@
 # Advertising
 
 
-# > 垃圾空链接
-IP-CIDR,36.110.144.18/32,no-resolve
-IP-CIDR,39.165.89.140/32,no-resolve
-IP-CIDR,183.61.49.155/32,no-resolve
-IP-CIDR,59.36.121.252/32,no-resolve
-IP-CIDR,111.48.226.173/32,no-resolve
-IP-CIDR,111.231.13.74/32,no-resolve
-DOMAIN-KEYWORD,adservice
 # > Apple
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,ads.internal.unity3d.com
@@ -56,5 +48,3 @@ DOMAIN,appcloud2.in.zhihu.com
 DOMAIN,crash2.zhihu.com
 DOMAIN,mqtt.zhihu.com
 DOMAIN,sugar.zhihu.com
-IP-CIDR, 118.89.204.198/32
-IP-CIDR, 103.41.167.237/32
