@@ -9,7 +9,6 @@ USER-AGENT,QQ*
 USER-AGENT,TIM*
 USER-AGENT,MApi* 
 USER-AGENT,NeteaseMusic*
-
 DOMAIN-KEYWORD,.tmall.com
 DOMAIN-KEYWORD,alicdn
 DOMAIN-KEYWORD,alipay
@@ -27,10 +26,8 @@ DOMAIN-KEYWORD,douyin
 DOMAIN-KEYWORD,ocsp
 DOMAIN-KEYWORD,deepl
 DOMAIN-KEYWORD,-cn
-
 # Bluesea Emby
 DOMAIN-SUFFIX,bluesea.ddns.me
-
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,qq.com.cn
 DOMAIN-SUFFIX,alipay.com
@@ -55,7 +52,6 @@ DOMAIN-SUFFIX,wpxz.org
 DOMAIN-SUFFIX,app.so
 DOMAIN-SUFFIX,ruguoapp.com
 DOMAIN-SUFFIX,CN
-
 IP-CIDR,1.255.62.0/24,no-resolve
 IP-CIDR,101.32.118.0/23,no-resolve
 IP-CIDR,101.32.96.0/20,no-resolve
@@ -66,3 +62,11 @@ IP-CIDR,183.128.0.0/11,no-resolve
 IP-CIDR,185.188.32.0/22,no-resolve
 IP-CIDR,203.205.238.0/23,no-resolve
 IP-CIDR,203.205.254.0/23,no-resolve
+# Apple
+IP-ASN,714,DIRECT,no-resolve
+IP-ASN,20940,DIRECT,no-resolve
+# weixin
+IP-ASN,45090,DIRECT,no-resolve
+IP-ASN,56040,DIRECT,no-resolve // 中移
+IP-ASN,9808,DIRECT,no-resolve
+IP-ASN,37963,DIRECT,no-resolve
