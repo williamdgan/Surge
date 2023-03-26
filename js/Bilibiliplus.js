@@ -1,4 +1,4 @@
-//@blackmatrix7
+//作者@blackmatrix7
 
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
