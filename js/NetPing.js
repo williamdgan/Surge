@@ -5,7 +5,7 @@ YouTube:'https://www.youtube.com',
 Google:'https://www.google.com/generate_204'}  
 //GH:'https://www.github.com'}
 !(async () => {
-await Promise.all([http('H'),http('B'),http('Y'),http('G')]).then((x)=>{
+await Promise.all([http('Baidu'),http('YouTube'),http('Google')]).then((x)=>{
 	$done({
     title: '𝗡𝗲𝘁𝗣𝗶𝗻𝗴',
     content: x.join(' '),
