@@ -1,0 +1,18 @@
+[Rule]
+AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
+DOMAIN,app-site-association.cdn-apple.com,REJECT
+
+[URL Rewrite]
+^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+
+[Header Rewrite]
+http-request ^https?:\/\/www\.zhihu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+http-request ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace-regex User-Agent .+iPhone.+ "Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)"
+
+[Script]
+baidu-index = type=http-response,pattern=^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*|\/\?from.*)$,requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baidu-index.js
+BaiduNoRedirect =type=http-response,pattern=^https?:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baidu-NoRedirect.js
+
+[MITM]
+hostname = %APPEND% www.google.cn, www.zhihu.com, *.baidu.com, m.baidu.com, boxer.baidu.com
