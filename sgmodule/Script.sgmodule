@@ -38,8 +38,6 @@ baidu-index = type=http-response,pattern=^https?:\/\/(www|m)\.baidu\.com(/|\/\?r
 spotify = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/AdGuard.js
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
-Sub-Store Sync = type=cron,cronexp=0 0 * * *,wake-system=1,timeout=120,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js
-
 
 [MITM]
 hostname =  %APPEND% baimiao.uzero.cn, photos.adobe.io, testflight.apple.com, biz.caiyunapp.com, *.googlevideo.com, youtubei.googleapis.com, mb3admin.com, www.google.cn, www.zhihu.com, *.baidu.com, spclient.wg.spotify.com, mobile-api.adguard.org, sub.store, webappcfg.paas.cmbchina.com
