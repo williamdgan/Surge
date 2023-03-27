@@ -5,10 +5,10 @@
 hostname = boxer.baidu.com
 
 QuantumultX：
-^https?:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-header https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/baidu/baiduNoRedirect.js
+^https?:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-header https://raw.githubusercontent.com/Mubdao/Surge/main/js/baiduNoRedirect.js
 
 Surge：
-百度防跳转 = type=http-response,pattern=^https?:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/BaiduSearch/RemoveBaiduSearchRedirect.js
+百度防跳转 = type=http-response,pattern=^https?:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/baiduNoRedirect.js
 */
 
 
