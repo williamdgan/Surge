@@ -9,7 +9,7 @@ await Promise.all([http('H'),http('B'),http('Y'),http('G')]).then((x)=>{
 	$done({
     title: '𝗡𝗲𝘁𝗣𝗶𝗻𝗴',
     content: x.join(' '),
-    icon: 'timer','icon-color': '#FF5A9AF9',
+    //icon: 'timer','icon-color': '#FF5A9AF9',
   })})})();
 function http(req) {
     return new Promise((r) => {
