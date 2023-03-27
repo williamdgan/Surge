@@ -4,9 +4,9 @@ FileBall挂载阿里云盘
 hostname = api.aliyundrive.com
 
 [rewrite]
-# 配置后，关闭阿里云盘重新进入获取refreshToken，获取后关闭脚本
+# refreshToken获取 获取后关闭脚本
 ^https:\/\/api.aliyundrive.com\/users\/v1\/users\/device\/create_session url script-request-body https://raw.githubusercontent.com/Mubdao/Surge/main/js/FileballQx.js
-
+# 云盘挂载
 ^http://(aliyun|quark|pikpak)\.example\.com url script-analyze-echo-response https://raw.githubusercontent.com/Mubdao/Surge/main/js/FileballQx.js
 */
 
