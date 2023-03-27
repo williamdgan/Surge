@@ -14,7 +14,7 @@ let uniqueLocationsArray = [...new Set(locationsArray)];
 let uniqueLocations = uniqueLocationsArray.join("  ");
 
   body = {
-    title: "NetISP",
+    title: "𝗡𝗲𝘁𝗜𝗦𝗣",
 		//${emoji}
     content: `${ip}  ${isp} \n${uniqueLocations}`
    // icon: "key.icloud", 'icon-color': "#FF5A9AF9"
