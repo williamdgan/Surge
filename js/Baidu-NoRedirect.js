@@ -8,7 +8,7 @@ QuantumultX：
 ^https?:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-header https://raw.githubusercontent.com/Mubdao/Surge/main/js/baiduNoRedirect.js
 
 Surge：
-百度防跳转 = type=http-response,pattern=^https?:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/BaiduNoRedirect.js
+百度防跳转 = type=http-response,pattern=^https?:\/\/boxer\.baidu\.com\/scheme\?scheme,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Baidu-NoRedirect.js
 */
 
 
