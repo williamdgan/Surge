@@ -24,10 +24,8 @@ DOMAIN-KEYWORD,wechat
 DOMAIN-KEYWORD,outlook
 DOMAIN-KEYWORD,douyin
 DOMAIN-KEYWORD,ocsp
-DOMAIN-KEYWORD,deepl
 DOMAIN-KEYWORD,-cn
-# Bluesea Emby
-DOMAIN-SUFFIX,bluesea.ddns.me
+DOMAIN-SUFFIX,bluesea.ddns.me // Bluesea Emby
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,qq.com.cn
 DOMAIN-SUFFIX,alipay.com
