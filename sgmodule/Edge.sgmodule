@@ -3,9 +3,22 @@
 #Surge pro @xiaobail
 
 
-[Script]
-bing-edge-ua = type=http-request,pattern=^http(s)?:\/\/(?:.*\.)?bing\.com,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Edge.js,requires-body=false
+[Rule]
+DOMAIN-SUFFIX,bing.com,Proxy
+DOMAIN-SUFFIX,bing.com.cn,Proxy
+DOMAIN-SUFFIX,bing.net,Proxy
+DOMAIN-SUFFIX,bingads.com,Proxy
+DOMAIN-SUFFIX,bingagencyawards.com,Proxy
+DOMAIN-SUFFIX,bingapistatistics.com,Proxy
+DOMAIN-SUFFIX,bingsandbox.com,Proxy
+DOMAIN-SUFFIX,bingvisualsearch.com,Proxy
+DOMAIN-SUFFIX,bingworld.com,Proxy
 
+[Rewrite]
+^https:\/\/www\.bing\.com\/(search|new) header-add X-Forwarded-For 1.1.1.1
+
+[Script]
+BingAI = type=http-request,pattern=^https:\/\/www\.bing\.com\/(search|new),requires-body=false,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Edge.js
 
 [MITM]
-hostname = %APPEND% *.bing.com, bing.com
+hostname = %APPEND% www.bing.com
