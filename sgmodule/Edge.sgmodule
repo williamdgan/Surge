@@ -4,15 +4,15 @@
 
 
 [Rule]
-DOMAIN-SUFFIX,bing.com,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bing.com.cn,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bing.net,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bingads.com,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bingagencyawards.com,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bingapistatistics.com,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bingsandbox.com,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bingvisualsearch.com,ᴘʀᴏxɪᴇs
-DOMAIN-SUFFIX,bingworld.com,ᴘʀᴏxɪᴇs
+DOMAIN-SUFFIX,bing.com,Proxies
+DOMAIN-SUFFIX,bing.com.cn,Proxies
+DOMAIN-SUFFIX,bing.net,Proxies
+DOMAIN-SUFFIX,bingads.com,Proxies
+DOMAIN-SUFFIX,bingagencyawards.com,Proxies
+DOMAIN-SUFFIX,bingapistatistics.com,Proxies
+DOMAIN-SUFFIX,bingsandbox.com,Proxies
+DOMAIN-SUFFIX,bingvisualsearch.com,Proxies
+DOMAIN-SUFFIX,bingworld.com,Proxies
 
 [Rewrite]
 ^https:\/\/www\.bing\.com\/(search|new) header-add X-Forwarded-For 1.1.1.1
