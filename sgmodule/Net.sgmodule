@@ -5,7 +5,7 @@
 
 [Panel]
 # ping
-NetPing = script-name=NetPing,update-interval=-1
+#NetPing = script-name=NetPing,update-interval=-1
 # ip isp city
 NetISP = script-name=NetISP,update-interval=-1
 
