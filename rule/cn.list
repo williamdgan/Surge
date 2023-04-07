@@ -28,6 +28,7 @@ DOMAIN-KEYWORD,wpxz
 DOMAIN-KEYWORD,dzfby
 DOMAIN-KEYWORD,yunpan1
 DOMAIN-KEYWORD,-cn
+DOMAIN-SUFFIX,ddns.me  // Blueaes emby
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,qq.com.cn
 DOMAIN-SUFFIX,alipay.com
@@ -51,6 +52,7 @@ DOMAIN-SUFFIX,meituan.net
 DOMAIN-SUFFIX,app.so
 DOMAIN-SUFFIX,ruguoapp.com
 DOMAIN-SUFFIX,CN
+IP-CIDR,5.78.94.54/32,DIRECT,no-resolve //Blueaes emby
 IP-CIDR,1.255.62.0/24,no-resolve
 IP-CIDR,101.32.118.0/23,no-resolve
 IP-CIDR,101.32.96.0/20,no-resolve
