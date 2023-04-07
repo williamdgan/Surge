@@ -1,5 +1,5 @@
 /*
-Surge配置参考注释，感谢@asukanana,感谢@congcong.
+Surge配置参考注释,感谢@congcong.
 
 示例↓↓↓ 
 ----------------------------------------
@@ -41,24 +41,21 @@ let resetDayLeft = getRmainingDays(resetDay);
   }
   let used = usage.download + usage.upload;
   let total = usage.total;
-  let proportion = used / total;
   let expire = usage.expire || args.expire;
-  let localProxy = ['=http, localhost, 6152','=http, 127.0.0.1, 6152','=socks5,127.0.0.1, 6153','=socks5,localhost, 6153']
-  let infoList = [`${bytesToSize(used)} | ${toPercent(proportion)}`];
+  let localProxy = '=http, localhost, 6152'
+  let infoList = [`${bytesToSize(used)} | ${bytesToSize(total-used)}`];
 
   if (resetDayLeft) {
-    infoList.push(`Resets in ${resetDayLeft} day`);
+    infoList.push(`重置: 剩余${resetDayLeft}天`);
   }
   if (expire) {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    infoList.push(`Expire: ${formatTime(expire)}`);
-  }
-  if (total) {
-    infoList.push(`Total: ${bytesToSize(total)}`);
+    infoList.push(`到期: ${formatTime(expire)}`);
   }
   sendNotification(used / total, expire, infoList);
-  let body = infoList.map((item, index) => item+localProxy[index]).join("\n");
-  $done({ response: { body } });
+  infoList.push(`更新: ${get_time()}`)
+  let body = infoList.map(item => item+localProxy).join("\n");
+  $done({ response: { body} });
 })();
 
 function getArgs(url) {
@@ -123,7 +120,7 @@ function getRmainingDays(resetDay) {
 function bytesToSize(bytes) {
   if (bytes === 0) return "0B";
   let k = 1024;
-  sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+  sizes = ["B", "K", "M", "G", "T", "P", "E", "Z", "Y"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
 }
@@ -133,7 +130,7 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return year + "-" + month + "-" + day;
+  return year + "/" + month + "/" + day + "";
 }
 
 function sendNotification(usageRate, expire, infoList) {
@@ -207,7 +204,11 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-function toPercent(proportion) {
-  const percent = Number(proportion*100).toFixed(1);
-  return `${percent}%`
+function get_time() {
+  let now = new Date();
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
+  hour = hour > 9 ? hour : "0" + hour;
+  minutes = minutes > 9 ? minutes : "0" + minutes;
+  return hour + ":" + minutes;
 }
