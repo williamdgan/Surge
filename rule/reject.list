@@ -7,6 +7,17 @@ DOMAIN-SUFFIX,ads.internal.unity3d.com
 DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 
+# Baidu
+DOMAIN,afd.baidu.com
+DOMAIN,als.baidu.com
+DOMAIN,nsclick.baidu.com
+DOMAIN,hm.baidu.com
+DOMAIN,hmma.baidu.com
+
+# Bilibili
+DOMAIN-SUFFIX,szbdyd.com  // 垃圾CDN
+IP-CIDR,203.107.1.1/24,no-resolve
+
 # Google
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,googleadservices.com
@@ -32,19 +43,19 @@ DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 
-# Baidu
-DOMAIN,afd.baidu.com
-DOMAIN,als.baidu.com
-DOMAIN,nsclick.baidu.com
-DOMAIN,hm.baidu.com
-DOMAIN,hmma.baidu.com
-
 # zhuhu
 DOMAIN,appcloud.zhihu.com
 DOMAIN,appcloud2.in.zhihu.com
 DOMAIN,crash2.zhihu.com
 DOMAIN,mqtt.zhihu.com
 DOMAIN,sugar.zhihu.com
+
+# 字节跳动
+DOMAIN,ad.toutiao.com
+DOMAIN,dsp.toutiao.com
+DOMAIN,pangolin.snssdk.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
+DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 
 # other
 DOMAIN-SUFFIX,u3.ucweb.com
