@@ -1,18 +1,6 @@
-#!name=Bing Edge UA
+#!name=New Bing Ai
 #!desc=safari修改UA直接使用newbing
-#Surge pro @xiaobail
 
-
-[Rule]
-DOMAIN-SUFFIX,bing.com,Proxies
-DOMAIN-SUFFIX,bing.com.cn,Proxies
-DOMAIN-SUFFIX,bing.net,Proxies
-DOMAIN-SUFFIX,bingads.com,Proxies
-DOMAIN-SUFFIX,bingagencyawards.com,Proxies
-DOMAIN-SUFFIX,bingapistatistics.com,Proxies
-DOMAIN-SUFFIX,bingsandbox.com,Proxies
-DOMAIN-SUFFIX,bingvisualsearch.com,Proxies
-DOMAIN-SUFFIX,bingworld.com,Proxies
 
 [Rewrite]
 ^https:\/\/www\.bing\.com\/(search|new) header-add X-Forwarded-For 1.1.1.1
