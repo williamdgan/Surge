@@ -9,8 +9,6 @@ force-http-engine-hosts = %APPEND% aliyun.example.com:0
 skip-proxy = %APPEND% iosapps.itunes.apple.com
 
 [Map Local]
-# CMB
-^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
 # YouTube
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/blank.txt" header="Content-Type: application/vnd.yt-ump"
 
@@ -23,4 +21,4 @@ Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https:/
 Fileball = type=http-request,pattern=^http:\/\/(aliyun|quark|pikpak)\.example\.com,requires-body=1,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Fileball.js
 
 [MITM]
-hostname = %APPEND% webappcfg.paas.cmbchina.com, *.googlevideo.com, youtubei.googleapis.com, testflight.apple.com, biz.caiyunapp.com, mobile-api.adguard.org, sub.store
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com, testflight.apple.com, biz.caiyunapp.com, mobile-api.adguard.org, sub.store
