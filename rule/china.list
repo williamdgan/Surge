@@ -63,6 +63,9 @@ DOMAIN-SUFFIX,ithome.com
 DOMAIN-SUFFIX,baidu.com
 DOMAIN-SUFFIX,10086.cn
 DOMAIN-SUFFIX,sinaimg.cn
+DOMAIN-SUFFIX,weibo.cn
+DOMAIN-SUFFIX,weibo.com
+DOMAIN-SUFFIX,weibocdn.com
 DOMAIN-SUFFIX,nssurge.com
 DOMAIN-SUFFIX,cdn.jsdelivr.net
 DOMAIN-SUFFIX,chinamobile.com
