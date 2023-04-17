@@ -30,4 +30,4 @@ BaiduNoRedirect =type=http-response,pattern=^https?:\/\/boxer\.baidu\.com\/schem
 BingAI =type=http-request,pattern=^https:\/\/www\.bing\.com\/(search|new),requires-body=false,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Edge.js
 
 [MITM]
-hostname = %APPEND% www.google.cn, www.zhihu.com, m.baidu.com, www.baidu.com, www.bing.com
+hostname = %APPEND% www.google.cn, www.zhihu.com, www.bing.com
