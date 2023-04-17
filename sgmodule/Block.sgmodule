@@ -1,0 +1,14 @@
+#!name=AD Block
+#!desc=广告屏蔽和其他规则补充
+
+
+[Rule]
+AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
+DOMAIN,app-site-association.cdn-apple.com,REJECT
+
+[Map Local]
+# CMB
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
+
+[MITM]
+hostname = %APPEND% webappcfg.paas.cmbchina.com
