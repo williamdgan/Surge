@@ -1,16 +1,6 @@
 # China
 
 
-# User-Agent
-USER-AGENT,MicroMessenger%20Client
-USER-AGENT,MicroMessenger*
-USER-AGENT,MicroMessengerClient*
-USER-AGENT,WeChat*
-USER-AGENT,QQ*
-USER-AGENT,TIM*
-USER-AGENT,MApi* 
-USER-AGENT,NeteaseMusic*
-
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
 
