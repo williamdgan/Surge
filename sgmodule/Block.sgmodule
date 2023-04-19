@@ -21,7 +21,7 @@ DOMAIN,googleads.g.doubleclick.net,REJECT-DROP
 [Map Local]
 # CMB
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
-# 申通快递 微信小程序
+# 微信小程序
 ^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
 ^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
 
