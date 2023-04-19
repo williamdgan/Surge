@@ -34,3 +34,6 @@ bili_json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/resourc
 bili_json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/bilibili_json.js
 # 解锁4K画质及1080P高码率 
 bili_json = type=http-response,pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/bilibili_json.js
+
+[MITM]
+hostname = %APPEND% app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net
