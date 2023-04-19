@@ -1,5 +1,5 @@
-#!name=Rewrite
-#!desc=URL Rewrite
+#!name=URL Rewrite
+#!desc=Google 地址重定向
 
 
 [URL Rewrite]
