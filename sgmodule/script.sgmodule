@@ -3,8 +3,6 @@
 
 
 [General]
-#  FlieBall Aliyun 
-force-http-engine-hosts = %APPEND% aliyun.example.com:0
 #  TestFlight区域限制解除
 skip-proxy = %APPEND% iosapps.itunes.apple.com
 
@@ -13,7 +11,6 @@ TestFlight = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/
 ColorWeather = type=http-response,pattern=https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Caiyun.js
 AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/AdGuard.js
 Sub-Store = type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store.min.js,requires-body=true,timeout=120,max-size=131072
-Fileball = type=http-request,pattern=^http:\/\/(aliyun|quark|pikpak)\.example\.com,requires-body=1,script-path=https://raw.githubusercontent.com/Mubdao/Surge/main/js/Fileball.js
 
 [MITM]
 hostname = %APPEND% testflight.apple.com, biz.caiyunapp.com, mobile-api.adguard.org, sub.store
