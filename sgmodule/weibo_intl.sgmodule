@@ -4,7 +4,7 @@
 
 
 [Rule]
-DOMAIN,sdkapp.uve.weibo.com,DIRECT
+DOMAIN,sdkapp.uve.weibo.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 [Map Local]
 ^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
