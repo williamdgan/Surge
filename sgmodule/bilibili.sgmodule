@@ -11,8 +11,8 @@
 
 [Map Local]
 # 直播间商品广告浮窗
-^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/Mubdao/Surge/main/mocks/reject-dict.json"
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/Mubdao/Surge/main/mocks/reject-dict.json"
 
 [Script]
 # Proto 动态去广告 
