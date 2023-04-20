@@ -1,17 +1,25 @@
-#!name=Ad block
+#!name=Ad block & whitelist
 #!desc=广告屏蔽和其他规则补充
 
 
 [Rule]
-DOMAIN,app-site-association.cdn-apple.com,REJECT
+# 强制回退 HTTP2/HTTP1.1
 AND,((PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
+# 屏蔽 YouTube 的 UDP
 AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
-# 屏蔽B站垃圾CDN
-DEST-PORT,4480,REJECT-NO-DROP
-DEST-PORT,4483,REJECT-NO-DROP
-DEST-PORT,9102,REJECT-NO-DROP
-DOMAIN,www.googleadservices.com,REJECT-DROP
-DOMAIN,googleads.g.doubleclick.net,REJECT-DROP
+# Safari 防跳转
+DOMAIN,app-site-association.cdn-apple.com,REJECT
+# Unbreak whitelist
+DOMAIN,fairplay.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,livew.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,vd.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,errlog.umeng.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,msg.umeng.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,msg.umengcloud.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,app.adjust.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,bdtj.tagtic.cn,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,dl.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,googletraveladservices.com,𝗗𝗜𝗥𝗘𝗖𝗧
 
 [URL Rewrite]
 # baidu
@@ -27,7 +35,6 @@ DOMAIN,googleads.g.doubleclick.net,REJECT-DROP
 ^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? - reject
 # 乘车码
 ^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi - reject
-^https:\/\/hdgateway\.zto\.com - reject
 
 [Map Local]
 # baidu
@@ -41,9 +48,6 @@ DOMAIN,googleads.g.doubleclick.net,REJECT-DROP
 ^https?:\/\/sa\d\.tuisong\.baidu\.com data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
 # CMB
 ^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
-# 微信小程序
-^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
-^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images data="https://raw.githubusercontent.com/Mubdao/Surge/main/js/reject-dict.json"
 
 [MITM]
-hostname = %APPEND% ccmsupport-sz.tenpay.com, hdgateway.zto.com, webappcfg.paas.cmbchina.com, customer-app.sto.cn, sto-customer-app.oss-cn-shanghai.aliyuncs.co
+hostname = %APPEND% ccmsupport-sz.tenpay.com, webappcfg.paas.cmbchina.com
