@@ -10,16 +10,52 @@ AND,((PROTOCOL,UDP), (DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
 # Safari 防跳转
 DOMAIN,app-site-association.cdn-apple.com,REJECT
 # Unbreak whitelist
-DOMAIN,fairplay.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
-DOMAIN,livew.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
-DOMAIN,vd.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,ad.10010.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt1-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt2-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt3-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt4-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt5-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt6-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt7-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,alt8-mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,analytics.95516.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,analytics.strava.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,app.adjust.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,app.appsflyer.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,bdtj.tagtic.cn,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,clientservices.googleapis.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,dl.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,dl.l.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
 DOMAIN,errlog.umeng.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,fairplay.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,fonts.googleapis.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,fonts.gstatic.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,livew.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,log.mmstat.com,𝗗𝗜𝗥𝗘𝗖𝗧
 DOMAIN,msg.umeng.com,𝗗𝗜𝗥𝗘𝗖𝗧
 DOMAIN,msg.umengcloud.com,𝗗𝗜𝗥𝗘𝗖𝗧
-DOMAIN,app.adjust.com,𝗗𝗜𝗥𝗘𝗖𝗧
-DOMAIN,bdtj.tagtic.cn,𝗗𝗜𝗥𝗘𝗖𝗧
-DOMAIN,dl.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,mtalk.google.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,origin-a.akamaihd.net,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,picanalysis-auth.vivo.com.cn,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,picanalysis.vivo.com.cn,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,rewards.hypixel.net,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,sycm.mmstat.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,tracking.miui.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,update.googleapis.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,vd.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,vi.l.qq.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN,xivanalysis.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,baomitu.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,blog.google,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,bootcss.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,dizhensubao.getui.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,f.video.weibocdn.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,fus.cdn.krcom.cn,𝗗𝗜𝗥𝗘𝗖𝗧
 DOMAIN-SUFFIX,googletraveladservices.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,jiasule.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,ol.epicgames.com,𝗗𝗜𝗥𝗘𝗖𝗧
+DOMAIN-SUFFIX,staticfile.org,𝗗𝗜𝗥𝗘𝗖𝗧
 
 [URL Rewrite]
 # 乘车码
